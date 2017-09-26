@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0ACEC2F1F6353B90088006E /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEC2E1F6353B90088006E /* SocketManager.swift */; };
+		D0ACEC331F6354530088006E /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEC321F6354530088006E /* Packet.swift */; };
+		D0ACEC351F6354DD0088006E /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEC341F6354DD0088006E /* DataExtension.swift */; };
+		D0ACEC3B1F635C310088006E /* SocketManagerMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEC3A1F635C310088006E /* SocketManagerMaster.swift */; };
+		D0ACEC3D1F635C690088006E /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACEC3C1F635C690088006E /* Peripheral.swift */; };
+		D0C5A5931F63502000A77BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5A5921F63502000A77BB4 /* AppDelegate.swift */; };
+		D0C5A5951F63502000A77BB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5A5941F63502000A77BB4 /* ViewController.swift */; };
+		D0C5A5971F63502000A77BB4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5A5961F63502000A77BB4 /* Document.swift */; };
+		D0C5A5991F63502000A77BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C5A5981F63502000A77BB4 /* Assets.xcassets */; };
+		D0C5A59C1F63502000A77BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C5A59A1F63502000A77BB4 /* Main.storyboard */; };
+		D0C5A5A71F63502000A77BB4 /* PacketRecieverTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5A5A61F63502000A77BB4 /* PacketRecieverTestTests.swift */; };
+		D0C5A5B21F63502000A77BB4 /* PacketRecieverTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5A5B11F63502000A77BB4 /* PacketRecieverTestUITests.swift */; };
+		E60E44F2C726B667C19A9457 /* Pods_PacketRecieverTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF203E1E95E1423AC9448CFB /* Pods_PacketRecieverTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0C5A5A31F63502000A77BB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0C5A5871F63502000A77BB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0C5A58E1F63502000A77BB4;
+			remoteInfo = PacketRecieverTest;
+		};
+		D0C5A5AE1F63502000A77BB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0C5A5871F63502000A77BB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0C5A58E1F63502000A77BB4;
+			remoteInfo = PacketRecieverTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		826155B7A142817133D8691A /* Pods-PacketRecieverTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketRecieverTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PacketRecieverTest/Pods-PacketRecieverTest.debug.xcconfig"; sourceTree = "<group>"; };
+		AF203E1E95E1423AC9448CFB /* Pods_PacketRecieverTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketRecieverTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0ACEC2E1F6353B90088006E /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		D0ACEC321F6354530088006E /* Packet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Packet.swift; path = ../Packet.swift; sourceTree = "<group>"; };
+		D0ACEC341F6354DD0088006E /* DataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		D0ACEC3A1F635C310088006E /* SocketManagerMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManagerMaster.swift; sourceTree = "<group>"; };
+		D0ACEC3C1F635C690088006E /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		D0C5A58F1F63502000A77BB4 /* PacketRecieverTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacketRecieverTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C5A5921F63502000A77BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0C5A5941F63502000A77BB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0C5A5961F63502000A77BB4 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		D0C5A5981F63502000A77BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0C5A59B1F63502000A77BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0C5A59D1F63502000A77BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C5A5A21F63502000A77BB4 /* PacketRecieverTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacketRecieverTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C5A5A61F63502000A77BB4 /* PacketRecieverTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketRecieverTestTests.swift; sourceTree = "<group>"; };
+		D0C5A5A81F63502000A77BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C5A5AD1F63502000A77BB4 /* PacketRecieverTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacketRecieverTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C5A5B11F63502000A77BB4 /* PacketRecieverTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketRecieverTestUITests.swift; sourceTree = "<group>"; };
+		D0C5A5B31F63502000A77BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3507CED71DAE6DC1C1E67E6 /* Pods-PacketRecieverTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketRecieverTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PacketRecieverTest/Pods-PacketRecieverTest.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0C5A58C1F63502000A77BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E44F2C726B667C19A9457 /* Pods_PacketRecieverTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C5A59F1F63502000A77BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C5A5AA1F63502000A77BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49B9B6321DD9100A1E4FEBBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF203E1E95E1423AC9448CFB /* Pods_PacketRecieverTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6116543FA2E0E8BFC23C9F37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				826155B7A142817133D8691A /* Pods-PacketRecieverTest.debug.xcconfig */,
+				D3507CED71DAE6DC1C1E67E6 /* Pods-PacketRecieverTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0ACEC391F635C0E0088006E /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACEC3A1F635C310088006E /* SocketManagerMaster.swift */,
+				D0ACEC3C1F635C690088006E /* Peripheral.swift */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		D0C5A5861F63502000A77BB4 = {
+			isa = PBXGroup;
+			children = (
+				D0C5A5911F63502000A77BB4 /* PacketRecieverTest */,
+				D0C5A5A51F63502000A77BB4 /* PacketRecieverTestTests */,
+				D0C5A5B01F63502000A77BB4 /* PacketRecieverTestUITests */,
+				D0C5A5901F63502000A77BB4 /* Products */,
+				6116543FA2E0E8BFC23C9F37 /* Pods */,
+				49B9B6321DD9100A1E4FEBBC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0C5A5901F63502000A77BB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0C5A58F1F63502000A77BB4 /* PacketRecieverTest.app */,
+				D0C5A5A21F63502000A77BB4 /* PacketRecieverTestTests.xctest */,
+				D0C5A5AD1F63502000A77BB4 /* PacketRecieverTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0C5A5911F63502000A77BB4 /* PacketRecieverTest */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACEC391F635C0E0088006E /* Master */,
+				D0C5A5921F63502000A77BB4 /* AppDelegate.swift */,
+				D0C5A5941F63502000A77BB4 /* ViewController.swift */,
+				D0C5A5961F63502000A77BB4 /* Document.swift */,
+				D0C5A5981F63502000A77BB4 /* Assets.xcassets */,
+				D0C5A59A1F63502000A77BB4 /* Main.storyboard */,
+				D0C5A59D1F63502000A77BB4 /* Info.plist */,
+				D0ACEC321F6354530088006E /* Packet.swift */,
+				D0ACEC2E1F6353B90088006E /* SocketManager.swift */,
+				D0ACEC341F6354DD0088006E /* DataExtension.swift */,
+			);
+			path = PacketRecieverTest;
+			sourceTree = "<group>";
+		};
+		D0C5A5A51F63502000A77BB4 /* PacketRecieverTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0C5A5A61F63502000A77BB4 /* PacketRecieverTestTests.swift */,
+				D0C5A5A81F63502000A77BB4 /* Info.plist */,
+			);
+			path = PacketRecieverTestTests;
+			sourceTree = "<group>";
+		};
+		D0C5A5B01F63502000A77BB4 /* PacketRecieverTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0C5A5B11F63502000A77BB4 /* PacketRecieverTestUITests.swift */,
+				D0C5A5B31F63502000A77BB4 /* Info.plist */,
+			);
+			path = PacketRecieverTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0C5A58E1F63502000A77BB4 /* PacketRecieverTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C5A5B61F63502000A77BB4 /* Build configuration list for PBXNativeTarget "PacketRecieverTest" */;
+			buildPhases = (
+				A6EB7A83D40F1B50B9D257E2 /* [CP] Check Pods Manifest.lock */,
+				D0C5A58B1F63502000A77BB4 /* Sources */,
+				D0C5A58C1F63502000A77BB4 /* Frameworks */,
+				D0C5A58D1F63502000A77BB4 /* Resources */,
+				FAB02DAB90C6F6E08BEFCD2E /* [CP] Embed Pods Frameworks */,
+				3446E050DAE1C184D90B3B44 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketRecieverTest;
+			productName = PacketRecieverTest;
+			productReference = D0C5A58F1F63502000A77BB4 /* PacketRecieverTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0C5A5A11F63502000A77BB4 /* PacketRecieverTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C5A5B91F63502000A77BB4 /* Build configuration list for PBXNativeTarget "PacketRecieverTestTests" */;
+			buildPhases = (
+				D0C5A59E1F63502000A77BB4 /* Sources */,
+				D0C5A59F1F63502000A77BB4 /* Frameworks */,
+				D0C5A5A01F63502000A77BB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0C5A5A41F63502000A77BB4 /* PBXTargetDependency */,
+			);
+			name = PacketRecieverTestTests;
+			productName = PacketRecieverTestTests;
+			productReference = D0C5A5A21F63502000A77BB4 /* PacketRecieverTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0C5A5AC1F63502000A77BB4 /* PacketRecieverTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C5A5BC1F63502000A77BB4 /* Build configuration list for PBXNativeTarget "PacketRecieverTestUITests" */;
+			buildPhases = (
+				D0C5A5A91F63502000A77BB4 /* Sources */,
+				D0C5A5AA1F63502000A77BB4 /* Frameworks */,
+				D0C5A5AB1F63502000A77BB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0C5A5AF1F63502000A77BB4 /* PBXTargetDependency */,
+			);
+			name = PacketRecieverTestUITests;
+			productName = PacketRecieverTestUITests;
+			productReference = D0C5A5AD1F63502000A77BB4 /* PacketRecieverTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0C5A5871F63502000A77BB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "James Park";
+				TargetAttributes = {
+					D0C5A58E1F63502000A77BB4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G3GED29J33;
+						ProvisioningStyle = Automatic;
+					};
+					D0C5A5A11F63502000A77BB4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G3GED29J33;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0C5A58E1F63502000A77BB4;
+					};
+					D0C5A5AC1F63502000A77BB4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G3GED29J33;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0C5A58E1F63502000A77BB4;
+					};
+				};
+			};
+			buildConfigurationList = D0C5A58A1F63502000A77BB4 /* Build configuration list for PBXProject "PacketRecieverTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0C5A5861F63502000A77BB4;
+			productRefGroup = D0C5A5901F63502000A77BB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0C5A58E1F63502000A77BB4 /* PacketRecieverTest */,
+				D0C5A5A11F63502000A77BB4 /* PacketRecieverTestTests */,
+				D0C5A5AC1F63502000A77BB4 /* PacketRecieverTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0C5A58D1F63502000A77BB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C5A5991F63502000A77BB4 /* Assets.xcassets in Resources */,
+				D0C5A59C1F63502000A77BB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C5A5A01F63502000A77BB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C5A5AB1F63502000A77BB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3446E050DAE1C184D90B3B44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PacketRecieverTest/Pods-PacketRecieverTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6EB7A83D40F1B50B9D257E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PacketRecieverTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAB02DAB90C6F6E08BEFCD2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PacketRecieverTest/Pods-PacketRecieverTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PacketRecieverTest/Pods-PacketRecieverTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0C5A58B1F63502000A77BB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0ACEC3B1F635C310088006E /* SocketManagerMaster.swift in Sources */,
+				D0C5A5951F63502000A77BB4 /* ViewController.swift in Sources */,
+				D0C5A5931F63502000A77BB4 /* AppDelegate.swift in Sources */,
+				D0ACEC331F6354530088006E /* Packet.swift in Sources */,
+				D0ACEC351F6354DD0088006E /* DataExtension.swift in Sources */,
+				D0ACEC2F1F6353B90088006E /* SocketManager.swift in Sources */,
+				D0C5A5971F63502000A77BB4 /* Document.swift in Sources */,
+				D0ACEC3D1F635C690088006E /* Peripheral.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C5A59E1F63502000A77BB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C5A5A71F63502000A77BB4 /* PacketRecieverTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C5A5A91F63502000A77BB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C5A5B21F63502000A77BB4 /* PacketRecieverTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0C5A5A41F63502000A77BB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0C5A58E1F63502000A77BB4 /* PacketRecieverTest */;
+			targetProxy = D0C5A5A31F63502000A77BB4 /* PBXContainerItemProxy */;
+		};
+		D0C5A5AF1F63502000A77BB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0C5A58E1F63502000A77BB4 /* PacketRecieverTest */;
+			targetProxy = D0C5A5AE1F63502000A77BB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0C5A59A1F63502000A77BB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C5A59B1F63502000A77BB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0C5A5B41F63502000A77BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0C5A5B51F63502000A77BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		D0C5A5B71F63502000A77BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 826155B7A142817133D8691A /* Pods-PacketRecieverTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = PacketRecieverTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QuantumSpark.PacketRecieverTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D0C5A5B81F63502000A77BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3507CED71DAE6DC1C1E67E6 /* Pods-PacketRecieverTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = PacketRecieverTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QuantumSpark.PacketRecieverTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D0C5A5BA1F63502000A77BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = PacketRecieverTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QuantumSpark.PacketRecieverTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacketRecieverTest.app/Contents/MacOS/PacketRecieverTest";
+			};
+			name = Debug;
+		};
+		D0C5A5BB1F63502000A77BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = PacketRecieverTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QuantumSpark.PacketRecieverTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PacketRecieverTest.app/Contents/MacOS/PacketRecieverTest";
+			};
+			name = Release;
+		};
+		D0C5A5BD1F63502000A77BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = PacketRecieverTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QuantumSpark.PacketRecieverTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PacketRecieverTest;
+			};
+			name = Debug;
+		};
+		D0C5A5BE1F63502000A77BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GED29J33;
+				INFOPLIST_FILE = PacketRecieverTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QuantumSpark.PacketRecieverTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PacketRecieverTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0C5A58A1F63502000A77BB4 /* Build configuration list for PBXProject "PacketRecieverTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C5A5B41F63502000A77BB4 /* Debug */,
+				D0C5A5B51F63502000A77BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C5A5B61F63502000A77BB4 /* Build configuration list for PBXNativeTarget "PacketRecieverTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C5A5B71F63502000A77BB4 /* Debug */,
+				D0C5A5B81F63502000A77BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C5A5B91F63502000A77BB4 /* Build configuration list for PBXNativeTarget "PacketRecieverTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C5A5BA1F63502000A77BB4 /* Debug */,
+				D0C5A5BB1F63502000A77BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C5A5BC1F63502000A77BB4 /* Build configuration list for PBXNativeTarget "PacketRecieverTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C5A5BD1F63502000A77BB4 /* Debug */,
+				D0C5A5BE1F63502000A77BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0C5A5871F63502000A77BB4 /* Project object */;
+}
