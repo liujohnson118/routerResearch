@@ -63,20 +63,10 @@ open class SocketManager: NSObject, GCDAsyncUdpSocketDelegate {
     
     /*Function to log received data to dataRecieved.txt*/
     /*You may need to do touch "dataReceived.txt" in your Mac Documents directory*/
-    func logData(_ data: Int,timeReceived: Double){
-        let currentBytes=self.totalBytes
-        var bytesPerSec=0.0
+    func logData(_ data: Int,timeReceived: Double, id: Int){
         let file="dataReceived.txt"
-        if currentBytes > 0{
-            bytesPerSec=Double(data)/(timeReceived-self.prevTime)
-            self.prevTime=timeReceived
-        }else{
-            self.prevTime=timeReceived
-        }
-        self.totalBytes=self.totalBytes+data
-        self.packetsReceived=self.packetsReceived+1
         //log data size, current time (UNIX time stamp), current total bytes and instantaneous speed
-        let text=String(data)+" "+String(timeReceived)+" "+String(currentBytes)+" "+String(bytesPerSec)+","
+        let text=String(data)+" "+String(timeReceived)+" "+" "+String(id)+","
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
             let path=dir.appendingPathComponent(file)
             if let fileHandle=try?FileHandle(forUpdating: path){
@@ -98,8 +88,9 @@ open class SocketManager: NSObject, GCDAsyncUdpSocketDelegate {
         } catch {
             return
         }
+        print(packet.id)
         if let data = packet.payload {
-            logData(data.count,timeReceived: Date().timeIntervalSince1970)
+            logData(data.count,timeReceived: Date().timeIntervalSince1970, id: packet.id)
         }
     }
     open func broadcastPacket(_ packet: Packet) {

@@ -141,8 +141,8 @@ class Camera: View, AVCapturePhotoCaptureDelegate, GCDAsyncSocketDelegate {
     
     /*Function to log sent data*/
     /*You may need to create dataSent.txt in your Mac documents directory*/
-    func logData(_ data: Int, speed: Double, time: Double){
-        let text=String(data)+" "+String(time)+" "+String(speed)+","
+    func logData(_ data: Int, speed: Double, time: Double, sequence: Int){
+        let text=String(data)+" "+String(time)+" "+String(speed)+" "+String(sequence)+","
         print(text)
     }
     
@@ -200,24 +200,24 @@ class Camera: View, AVCapturePhotoCaptureDelegate, GCDAsyncSocketDelegate {
             //createChunks(forData: data!)
             /*Simulate sending packets from multiple iPads*/
             //Assume videos are 30fps so with n iPads we're sending 30*n packets persecond
-            var n=5 //number of iPads
+            var n=2 //number of iPads
             var delay=1000/(Double(n)*30) //delay between packets in miliseconds
             var i = 0
-            let i_max = 10
             let startTime=Date().timeIntervalSince1970
             let endTime=startTime+60 //simulate sending packets for 600 seconds
             var currentTime=startTime
             var prevTime=startTime
             var bytesPerSec=0.0
             while currentTime<endTime{
-                socketManager.broadcastPacket(Packet(type: PacketType(rawValue:100000), id:5,payload:data))
+                socketManager.broadcastPacket(Packet(type: PacketType(rawValue:100000), id:i,payload:data))
                 self.packetsSent=self.packetsSent+1
                 self.bytesSent=self.bytesSent+data!.count
                 currentTime=Date().timeIntervalSince1970
                 bytesPerSec=Double(data!.count)/(currentTime-prevTime)
                 prevTime=currentTime
-                logData(data!.count,speed: bytesPerSec, time: Double(currentTime))
+                logData(data!.count,speed: bytesPerSec, time: Double(currentTime), sequence: i)
                 usleep(useconds_t(Int(round(delay)*1000)))
+                i=i+1
             }
             //UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
         } else {
