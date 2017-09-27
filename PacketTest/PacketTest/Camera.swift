@@ -40,7 +40,8 @@ class Camera: View, AVCapturePhotoCaptureDelegate, GCDAsyncSocketDelegate {
         return self.view as! CameraView // swiftlint:disable:this force_cast
     }
 
-
+    var packetsSent=0
+    var bytesSent=0
     public var constrainsProportions: Bool = true
 
     public override var width: Double {
@@ -140,9 +141,8 @@ class Camera: View, AVCapturePhotoCaptureDelegate, GCDAsyncSocketDelegate {
     
     /*Function to log sent data*/
     /*You may need to create dataSent.txt in your Mac documents directory*/
-    func logData(_ data: Int){
-        let file="dataSent.txt"
-        let text=String(data)+" "+String(Date().ticks)+","
+    func logData(_ data: Int, speed: Double, time: Double){
+        let text=String(data)+" "+String(time)+" "+String(speed)+","
         print(text)
     }
     
@@ -198,13 +198,26 @@ class Camera: View, AVCapturePhotoCaptureDelegate, GCDAsyncSocketDelegate {
             print("image size is \(data!.count) and string size is \(base64String.utf8.count)")
             //print(base64String)
             //createChunks(forData: data!)
+            /*Simulate sending packets from multiple iPads*/
+            //Assume videos are 30fps so with n iPads we're sending 30*n packets persecond
+            var n=5 //number of iPads
+            var delay=1000/(Double(n)*30) //delay between packets in miliseconds
             var i = 0
             let i_max = 10
-            while i<i_max{
-                usleep(500*1000)
+            let startTime=Date().timeIntervalSince1970
+            let endTime=startTime+60 //simulate sending packets for 600 seconds
+            var currentTime=startTime
+            var prevTime=startTime
+            var bytesPerSec=0.0
+            while currentTime<endTime{
                 socketManager.broadcastPacket(Packet(type: PacketType(rawValue:100000), id:5,payload:data))
-                logData(data!.count)
-                i=i+1
+                self.packetsSent=self.packetsSent+1
+                self.bytesSent=self.bytesSent+data!.count
+                currentTime=Date().timeIntervalSince1970
+                bytesPerSec=Double(data!.count)/(currentTime-prevTime)
+                prevTime=currentTime
+                logData(data!.count,speed: bytesPerSec, time: Double(currentTime))
+                usleep(useconds_t(Int(round(delay)*1000)))
             }
             //UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
         } else {

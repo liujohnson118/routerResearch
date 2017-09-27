@@ -23,7 +23,9 @@ open class SocketManager: NSObject, GCDAsyncUdpSocketDelegate {
     var totalBytes=0
     var bound = false
     var prevTime=0.0
+    var packetsReceived=0
 
+    
     //the socket that will be used to connect to the core app
     var socket: GCDAsyncUdpSocket!
 
@@ -61,20 +63,20 @@ open class SocketManager: NSObject, GCDAsyncUdpSocketDelegate {
     
     /*Function to log received data to dataRecieved.txt*/
     /*You may need to do touch "dataReceived.txt" in your Mac Documents directory*/
-    func logData(_ data: Int){
-        let file="dataReceived.txt"
-        let currentTime=Date().timeIntervalSince1970
+    func logData(_ data: Int,timeReceived: Double){
         let currentBytes=self.totalBytes
         var bytesPerSec=0.0
+        let file="dataReceived.txt"
         if currentBytes > 0{
-            bytesPerSec=Double(data)/(currentTime-self.prevTime)
-            print("Instantaenous reception speed is \(bytesPerSec) bytes per second")
-            self.prevTime=currentTime
+            bytesPerSec=Double(data)/(timeReceived-self.prevTime)
+            self.prevTime=timeReceived
         }else{
-            self.prevTime=currentTime
+            self.prevTime=timeReceived
         }
         self.totalBytes=self.totalBytes+data
-        let text=String(data)+" "+String(currentTime)+","
+        self.packetsReceived=self.packetsReceived+1
+        //log data size, current time (UNIX time stamp), current total bytes and instantaneous speed
+        let text=String(data)+" "+String(timeReceived)+" "+String(currentBytes)+" "+String(bytesPerSec)+","
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
             let path=dir.appendingPathComponent(file)
             if let fileHandle=try?FileHandle(forUpdating: path){
@@ -85,8 +87,10 @@ open class SocketManager: NSObject, GCDAsyncUdpSocketDelegate {
                 print("Error logging to dataReceived.txt")
             }
         }
-    }
 
+    }
+    
+    //Called each time a packet is received
     open func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
         var packet: Packet!
         do {
@@ -95,10 +99,9 @@ open class SocketManager: NSObject, GCDAsyncUdpSocketDelegate {
             return
         }
         if let data = packet.payload {
-            logData(data.count)
+            logData(data.count,timeReceived: Date().timeIntervalSince1970)
         }
     }
-
     open func broadcastPacket(_ packet: Packet) {
         socket.send(packet.serialize() as Data, toHost: SocketManager.broadcastHost, port: SocketManager.peripheralPort, withTimeout: -1, tag: 0)
     }
